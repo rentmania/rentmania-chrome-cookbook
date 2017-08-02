@@ -1,0 +1,13 @@
+[Unit]
+Description=headless google chrome
+After=network.target
+
+[Service]
+SyslogIdentifier=headless_google_chrome
+User=ubuntu
+Restart=on-failure
+
+ExecStart=google-chrome --headless --remote-debugging-port=9222 --disable-gpu "about:blank"
+
+[Install]
+WantedBy=multi-user.target
