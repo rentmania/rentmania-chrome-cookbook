@@ -7,7 +7,7 @@ SyslogIdentifier=headless_google_chrome
 User=ubuntu
 Restart=on-failure
 
-ExecStart=/usr/bin/google-chrome --headless --remote-debugging-port=9222 --disable-gpu "about:blank"
+ExecStart=/usr/bin/google-chrome --headless --remote-debugging-port=9222 --disable-gpu --window-size=1280,1696 "about:blank"
 
 [Install]
 WantedBy=multi-user.target
